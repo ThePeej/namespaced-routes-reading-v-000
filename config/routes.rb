@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   scope '/admin' do
     resources :stats, only: [:index]
   end
-  get '/admin/stats', to: 'stats#index'
 
   resources :authors, only: [:show, :index] do
     resources :posts, only: [:show, :index, :new, :edit]
