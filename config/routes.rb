@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope '/admin' do
+  scope '/admin', module: 'admind' do
     resources :stats, only: [:index]
   end
 
